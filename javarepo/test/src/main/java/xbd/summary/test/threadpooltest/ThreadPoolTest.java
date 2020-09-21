@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class ThreadPoolTest {
+    // 请求线程池版，耗时1秒以内
     @Test
     public void testMultiReq() throws UnsupportedEncodingException, ExecutionException, InterruptedException {
         String [] keys = {"篮球", "足球", "羽毛球", "乒乓球", "冰球", "溜溜球", "棒球", "网球", "橄榄球", "球球"};
@@ -32,6 +33,7 @@ public class ThreadPoolTest {
         System.out.println(end.getTime() - start.getTime());
     }
 
+    //请求顺序版，耗时4-5秒
     @Test
     public void testMultiReqByOrder() throws UnsupportedEncodingException, ExecutionException, InterruptedException {
         String [] keys = {"篮球", "足球", "羽毛球", "乒乓球", "冰球", "溜溜球", "棒球", "网球", "橄榄球", "球球"};
